@@ -1,0 +1,193 @@
+
+  :root{
+    --isla-teal:#123B36;
+    --isla-teal-deep:#0B2622;
+    --isla-sand:#F1E8D6;
+    --isla-coral:#E4623B;
+    --isla-gold:#C69A3C;
+    --isla-ink:#22201B;
+    --radius:2px;
+  }
+
+  *{scroll-behavior:smooth;}
+
+  body{
+    font-family:'Work Sans', sans-serif;
+    background:var(--isla-sand);
+    color:var(--isla-ink);
+  }
+
+  h1,h2,h3,h4,.display-font{
+    font-family:'Fraunces', serif;
+  }
+
+  .eyebrow{
+    font-family:'Work Sans', sans-serif;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    font-size:.72rem;
+    font-weight:600;
+    color:var(--isla-coral);
+  }
+
+  /* ---------- Navbar ---------- */
+  .navbar-isla{
+    background:var(--isla-teal-deep);
+    padding-top:.9rem;
+    padding-bottom:.9rem;
+  }
+  .navbar-isla .navbar-brand{
+    font-family:'Fraunces', serif;
+    font-weight:700;
+    font-size:1.4rem;
+    color:var(--isla-sand)!important;
+    letter-spacing:.02em;
+  }
+  .navbar-isla .navbar-brand span{ color:var(--isla-coral); }
+  .navbar-isla .nav-link{
+    color:rgba(241,232,214,.8)!important;
+    font-size:.88rem;
+    letter-spacing:.04em;
+    text-transform:uppercase;
+    font-weight:500;
+    margin:0 .35rem;
+  }
+  .navbar-isla .nav-link:hover, .navbar-isla .nav-link.active{ color:var(--isla-coral)!important; }
+  .btn-coral{
+    background:var(--isla-coral);
+    border-color:var(--isla-coral);
+    color:#fff;
+    font-weight:600;
+    letter-spacing:.03em;
+    border-radius:var(--radius);
+  }
+  .btn-coral:hover{ background:#c94f28; border-color:#c94f28; color:#fff; }
+  .btn-outline-sand{
+    border-color:rgba(241,232,214,.5);
+    color:var(--isla-sand);
+    border-radius:var(--radius);
+  }
+  .btn-outline-sand:hover{ background:var(--isla-sand); color:var(--isla-teal-deep); }
+
+  /* ---------- Hero / Carousel ---------- */
+  .hero-carousel .carousel-item{
+    height:88vh;
+    min-height:520px;
+    background-size:cover;
+    background-position:center;
+    position:relative;
+  }
+  .hero-carousel .carousel-item::after{
+    content:"";
+    position:absolute; inset:0;
+    background:linear-gradient(180deg, rgba(11,38,34,.55) 0%, rgba(11,38,34,.75) 100%);
+  }
+  .hero-slide-1{ background-image:url('https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1600&q=80'); }
+  .hero-slide-2{ background-image:url('https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1600&q=80'); }
+  .hero-slide-3{ background-image:url('https://images.unsplash.com/photo-1615141982883-c7ad0e69fd62?auto=format&fit=crop&w=1600&q=80'); }
+  .hero-caption{
+    position:relative; z-index:2;
+    height:100%;
+  }
+  .hero-caption .display-1{
+    font-size:clamp(2.5rem, 6vw, 5rem);
+    line-height:1.02;
+  }
+
+  /* ---------- Section rhythm ---------- */
+  section{ padding:5.5rem 0; }
+  .section-sand{ background:var(--isla-sand); }
+  .section-teal{ background:var(--isla-teal); color:var(--isla-sand); }
+  .divider-mark{
+    width:52px; height:3px; background:var(--isla-coral); margin:.6rem 0 1.4rem;
+  }
+
+  /* ---------- Menu cards ---------- */
+  .menu-card{
+    background:#fff;
+    border:1px solid rgba(18,59,54,.1);
+    border-radius:var(--radius);
+    overflow:hidden;
+    transition:transform .25s ease, box-shadow .25s ease;
+    height:100%;
+  }
+  .menu-card:hover{ transform:translateY(-6px); box-shadow:0 18px 30px rgba(18,59,54,.15); }
+  .menu-card img{ height:210px; object-fit:cover; width:100%; }
+  .menu-card .card-body{ padding:1.3rem 1.4rem 1.5rem; }
+  .price-tag{
+    font-family:'Fraunces', serif;
+    color:var(--isla-coral);
+    font-weight:600;
+  }
+  .nav-pills .nav-link{
+    color:var(--isla-teal);
+    font-weight:600;
+    border-radius:var(--radius);
+    letter-spacing:.03em;
+  }
+  .nav-pills .nav-link.active{
+    background:var(--isla-teal);
+    color:var(--isla-sand);
+  }
+
+  /* ---------- Accordion ---------- */
+  .accordion-item{ background:transparent; border:none; border-bottom:1px solid rgba(18,59,54,.18); }
+  .accordion-button{
+    background:transparent; font-family:'Fraunces', serif; font-weight:600; color:var(--isla-teal);
+    box-shadow:none!important; padding-left:0; padding-right:0;
+  }
+  .accordion-button:not(.collapsed){ color:var(--isla-coral); background:transparent; }
+  .accordion-button::after{ filter:none; }
+  .accordion-body{ padding-left:0; color:rgba(34,32,27,.8); }
+
+  /* ---------- Gallery ---------- */
+  .gallery-img{
+    border-radius:var(--radius);
+    overflow:hidden;
+    height:220px;
+  }
+  .gallery-img img{ height:100%; width:100%; object-fit:cover; transition:transform .4s ease; }
+  .gallery-img:hover img{ transform:scale(1.08); }
+
+  /* ---------- Reservation ---------- */
+  .form-control, .form-select{
+    border-radius:var(--radius);
+    border-color:rgba(18,59,54,.25);
+    padding:.65rem .9rem;
+  }
+  .form-control:focus, .form-select:focus{
+    border-color:var(--isla-coral);
+    box-shadow:0 0 0 .2rem rgba(228,98,59,.18);
+  }
+  .form-label{ font-weight:600; font-size:.85rem; letter-spacing:.03em; color:var(--isla-teal); }
+
+  /* ---------- List group / hours ---------- */
+  .list-group-item{
+    background:transparent;
+    border-color:rgba(241,232,214,.18);
+    color:var(--isla-sand);
+    padding:.7rem 0;
+    display:flex; justify-content:space-between;
+  }
+
+  /* ---------- Footer ---------- */
+  footer{ background:var(--isla-teal-deep); color:rgba(241,232,214,.7); }
+  footer a{ color:var(--isla-sand); text-decoration:none; }
+  footer a:hover{ color:var(--isla-coral); }
+  .social-circle{
+    width:38px; height:38px; border-radius:50%;
+    border:1px solid rgba(241,232,214,.35);
+    display:inline-flex; align-items:center; justify-content:center;
+    color:var(--isla-sand);
+  }
+  .social-circle:hover{ background:var(--isla-coral); border-color:var(--isla-coral); }
+
+  .badge-tag{
+    background:rgba(198,154,60,.15);
+    color:var(--isla-gold);
+    border:1px solid rgba(198,154,60,.4);
+    font-weight:600;
+    letter-spacing:.03em;
+  }
+
+  .rounded-none{ border-radius:var(--radius)!important; }

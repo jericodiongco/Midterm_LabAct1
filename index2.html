@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kusina Isla — Island Table & Grill</title>
+
+<!-- Bootstrap 5.3 CDN -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+<!-- ============ ALERT (promo banner) ============ -->
+<div class="alert alert-dark text-center mb-0 py-2 rounded-0" style="background:var(--isla-coral); color:#fff;" role="alert">
+  <i class="bi bi-stars me-1"></i> Island Nights every Friday — live kulintang music from 6 PM. <a href="#reserve" class="text-white text-decoration-underline">Reserve your table</a>.
+</div>
+
+<!-- ============ NAVBAR ============ -->
+<nav class="navbar navbar-expand-lg navbar-isla sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="#top">Kusina <span>Isla</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse d-none d-lg-flex" id="mainNav">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item"><a class="nav-link" href="#about">Our Story</a></li>
+        <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+        <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+        <li class="nav-item"><a class="nav-link" href="#reserve">Reservations</a></li>
+      </ul>
+      <a href="#reserve" class="btn btn-coral btn-sm px-3">Book a Table</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ============ OFFCANVAS (mobile menu) ============ -->
+<div class="offcanvas offcanvas-end text-bg-dark" style="background:var(--isla-teal-deep);" tabindex="-1" id="mobileMenu">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title display-font">Kusina Isla</h5>
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+    <ul class="navbar-nav gap-2">
+      <li class="nav-item"><a class="nav-link text-white" href="#about" data-bs-dismiss="offcanvas">Our Story</a></li>
+      <li class="nav-item"><a class="nav-link text-white" href="#menu" data-bs-dismiss="offcanvas">Menu</a></li>
+      <li class="nav-item"><a class="nav-link text-white" href="#gallery" data-bs-dismiss="offcanvas">Gallery</a></li>
+      <li class="nav-item"><a class="nav-link text-white" href="#faq" data-bs-dismiss="offcanvas">FAQ</a></li>
+      <li class="nav-item"><a class="nav-link text-white" href="#reserve" data-bs-dismiss="offcanvas">Reservations</a></li>
+    </ul>
+    <a href="#reserve" class="btn btn-coral w-100 mt-4" data-bs-dismiss="offcanvas">Book a Table</a>
+  </div>
+</div>
+
+<!-- ============ HERO CAROUSEL ============ -->
+<div id="heroCarousel" class="carousel slide hero-carousel" data-bs-ride="carousel" id="top">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="hero-slide-1" style="position:absolute;inset:0;background-size:cover;background-position:center;"></div>
+      <div class="container hero-caption d-flex align-items-center">
+        <div style="max-width:640px;">
+          <p class="eyebrow text-white-50 mb-3">Palawan-inspired seafood table</p>
+          <h1 class="display-1 display-font text-white fw-bold">Fresh catch, fire-grilled, island style.</h1>
+          <p class="text-white-50 fs-5 mt-3 mb-4">Kusina Isla brings the coastal kitchens of Palawan to your table — kinilaw, inasal, and coconut-milk classics cooked over open flame.</p>
+          <a href="#reserve" class="btn btn-coral btn-lg me-2">Reserve a Table</a>
+          <a href="#menu" class="btn btn-outline-sand btn-lg">View Menu</a>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="hero-slide-2" style="position:absolute;inset:0;background-size:cover;background-position:center;"></div>
+      <div class="container hero-caption d-flex align-items-center">
+        <div style="max-width:640px;">
+          <p class="eyebrow text-white-50 mb-3">Sourced daily</p>
+          <h1 class="display-1 display-font text-white fw-bold">From the bangka to your plate.</h1>
+          <p class="text-white-50 fs-5 mt-3 mb-4">Our fishermen partners bring in the day's catch every morning — nothing frozen, nothing rushed.</p>
+          <a href="#about" class="btn btn-coral btn-lg">Our Story</a>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="hero-slide-3" style="position:absolute;inset:0;background-size:cover;background-position:center;"></div>
+      <div class="container hero-caption d-flex align-items-center">
+        <div style="max-width:640px;">
+          <p class="eyebrow text-white-50 mb-3">Every Friday</p>
+          <h1 class="display-1 display-font text-white fw-bold">Island Nights, live and loud.</h1>
+          <p class="text-white-50 fs-5 mt-3 mb-4">Kulintang ensembles, lantern-lit tables, and a set menu built for sharing.</p>
+          <a href="#reserve" class="btn btn-coral btn-lg">Book Friday</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+
+<!-- ============ ABOUT ============ -->
+<section id="about" class="section-sand">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6">
+        <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=900&q=80" class="img-fluid rounded-none shadow-sm" alt="Chef preparing grilled seafood">
+      </div>
+      <div class="col-lg-6">
+        <p class="eyebrow">Our Story</p>
+        <h2 class="display-5 fw-bold mb-3">A kitchen built around one long table</h2>
+        <div class="divider-mark"></div>
+        <p class="fs-5" style="color:rgba(34,32,27,.8);">Kusina Isla started in 2016 as a weekend grill stand on a Cabuyao side street. Today it's a full dining room, but the idea hasn't changed: cook what came off the boat this morning, share it family-style, and let the fire do most of the talking.</p>
+        <div class="row mt-4 g-4">
+          <div class="col-6">
+            <h3 class="display-font text-start" style="color:var(--isla-coral);">8+</h3>
+            <p class="mb-0 small text-uppercase" style="letter-spacing:.05em;">Years Serving Cabuyao</p>
+          </div>
+          <div class="col-6">
+            <h3 class="display-font" style="color:var(--isla-coral);">120+</h3>
+            <p class="mb-0 small text-uppercase" style="letter-spacing:.05em;">Guests Seated Nightly</p>
+          </div>
+        </div>
+        <a href="#menu" class="btn btn-coral mt-4">Explore the Menu <i class="bi bi-arrow-right ms-1"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MENU (nav-pills + tab panes + cards + badges + tooltips) ============ -->
+<section id="menu" class="section-sand pt-0">
+  <div class="container">
+    <div class="text-center mb-5">
+      <p class="eyebrow justify-content-center d-flex">The Menu</p>
+      <h2 class="display-5 fw-bold">Grilled, cured, and coconut-braised</h2>
+    </div>
+
+    <ul class="nav nav-pills justify-content-center mb-5 gap-2" id="menuTabs" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#pane-grill" type="button">From the Grill</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" data-bs-toggle="pill" data-bs-target="#pane-sea" type="button">Raw & Cured</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" data-bs-toggle="pill" data-bs-target="#pane-braised" type="button">Coconut Braised</button>
+      </li>
+    </ul>
+
+    <div class="tab-content">
+      <div class="tab-pane fade show active" id="pane-grill" role="tabpanel">
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="menu-card">
+              <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80" alt="Inasal na manok">
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                  <h5 class="mb-0">Inasal na Manok</h5>
+                  <span class="badge badge-tag rounded-pill">Chef's Pick</span>
+                </div>
+                <p class="small mb-2" style="color:rgba(34,32,27,.7);">Annatto-marinated chicken thigh, charcoal-grilled, garlic rice, salted egg.</p>
+                <span class="price-tag">₱295</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="menu-card">
+              <img src="https://images.unsplash.com/photo-1559847844-5315695dadae?auto=format&fit=crop&w=600&q=80" alt="Grilled squid">
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                  <h5 class="mb-0">Inihaw na Pusit</h5>
+                  <span class="badge bg-light text-dark border" data-bs-toggle="tooltip" title="Stuffed with tomato and onion">Stuffed</span>
+                </div>
+                <p class="small mb-2" style="color:rgba(34,32,27,.7);">Whole grilled squid stuffed with tomato, onion, and calamansi.</p>
+                <span class="price-tag">₱340</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="menu-card">
+              <img src="https://images.unsplash.com/photo-1580476262798-bddd9f4b7369?auto=format&fit=crop&w=600&q=80" alt="Grilled liempo">
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                  <h5 class="mb-0">Liempo sa Uling</h5>
+                  <span class="badge bg-danger-subtle text-danger-emphasis border border-danger-subtle" data-bs-toggle="tooltip" title="Medium spice level">Spicy</span>
+                </div>
+                <p class="small mb-2" style="color:rgba(34,32,27,.7);">Pork belly, charcoal-grilled, spiced vinegar dip.</p>
+                <span class="price-tag">₱310</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-pane fade" id="pane-sea" role="tabpanel">
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="menu-card">
+              <img src="https://images.unsplash.com/photo-1580959375944-abd7e991f971?auto=format&fit=crop&w=600&q=80" alt="Kinilaw">
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                  <h5 class="mb-0">Kinilaw na Tanigue</h5>
+                  <span class="badge badge-tag rounded-pill">Signature</span>
+                </div>
+                <p class="small mb-2" style="color:rgba(34,32,27,.7);">Spanish mackerel cured in vinegar and calamansi, ginger, chili, coconut cream.</p>
+                <span class="price-tag">₱260</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="menu-card">
+              <img src="https://images.unsplash.com/photo-1615141982883-c7ad0e69fd62?auto=format&fit=crop&w=600&q=80" alt="Oysters">
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                  <h5 class="mb-0">Talaba on Ice</h5>
+                  <span class="badge bg-light text-dark border">Half Dozen</span>
+                </div>
+                <p class="small mb-2" style="color:rgba(34,32,27,.7);">Fresh oysters, calamansi mignonette, chili vinegar.</p>
+                <span class="price-tag">₱220</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="menu-card">
+              <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=600&q=80" alt="Shrimp ceviche">
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                  <h5 class="mb-0">Hipon Aguachile</h5>
+                  <span class="badge bg-danger-subtle text-danger-emphasis border border-danger-subtle" data-bs-toggle="tooltip" title="Bright citrus, chili heat">Spicy</span>
+                </div>
+                <p class="small mb-2" style="color:rgba(34,32,27,.7);">Shrimp, green chili, calamansi, cucumber, red onion.</p>
+                <span class="price-tag">₱280</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-pane fade" id="pane-braised" role="tabpanel">
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="menu-card">
+              <img src="https://images.unsplash.com/photo-1604909052743-94e838986d24?auto=format&fit=crop&w=600&q=80" alt="Ginataang crab">
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                  <h5 class="mb-0">Ginataang Alimasag</h5>
+                  <span class="badge badge-tag rounded-pill">Chef's Pick</span>
+                </div>
+                <p class="small mb-2" style="color:rgba(34,32,27,.7);">Blue crab simmered in coconut milk, malunggay, and chili.</p>
+                <span class="price-tag">₱420</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="menu-card">
+              <img src="https://images.unsplash.com/photo-1626200419199-391ae4be7a41?auto=format&fit=crop&w=600&q=80" alt="Bicol express">
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                  <h5 class="mb-0">Bicol Express</h5>
+                  <span class="badge bg-danger-subtle text-danger-emphasis border border-danger-subtle" data-bs-toggle="tooltip" title="Our spiciest dish">Very Spicy</span>
+                </div>
+                <p class="small mb-2" style="color:rgba(34,32,27,.7);">Pork belly, coconut cream, shrimp paste, siling labuyo.</p>
+                <span class="price-tag">₱265</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="menu-card">
+              <img src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=600&q=80" alt="Laing">
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                  <h5 class="mb-0">Laing with Baby Squid</h5>
+                  <span class="badge bg-light text-dark border">Vegetable-forward</span>
+                </div>
+                <p class="small mb-2" style="color:rgba(34,32,27,.7);">Dried taro leaves, coconut milk, baby squid, chili.</p>
+                <span class="price-tag">₱240</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALLERY + HOURS (list-group) on teal band ============ -->
+<section id="gallery" class="section-teal">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-8">
+        <p class="eyebrow" style="color:var(--isla-gold);">Gallery</p>
+        <h2 class="display-5 fw-bold mb-4">Around the dining room</h2>
+        <div class="row g-3">
+          <div class="col-6 col-md-4">
+            <div class="gallery-img"><img src="https://images.unsplash.com/photo-1544148103-0773bf10d330?auto=format&fit=crop&w=500&q=80" alt="Dining room"></div>
+          </div>
+          <div class="col-6 col-md-4">
+            <div class="gallery-img"><img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=500&q=80" alt="Grill station"></div>
+          </div>
+          <div class="col-6 col-md-4">
+            <div class="gallery-img"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=500&q=80" alt="Plated seafood"></div>
+          </div>
+          <div class="col-6 col-md-4">
+            <div class="gallery-img"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=500&q=80" alt="Bar area"></div>
+          </div>
+          <div class="col-6 col-md-4">
+            <div class="gallery-img"><img src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?auto=format&fit=crop&w=500&q=80" alt="Outdoor seating"></div>
+          </div>
+          <div class="col-6 col-md-4">
+            <div class="gallery-img"><img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=500&q=80" alt="Friday night event"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <p class="eyebrow" style="color:var(--isla-gold);">Visit Us</p>
+        <h2 class="display-5 fw-bold mb-4">Hours & Location</h2>
+        <ul class="list-group list-group-flush mb-4">
+          <li class="list-group-item"><span>Mon – Thu</span><span>11:00 AM – 9:00 PM</span></li>
+          <li class="list-group-item"><span>Fri – Sat</span><span>11:00 AM – 11:00 PM</span></li>
+          <li class="list-group-item"><span>Sunday</span><span>11:00 AM – 8:00 PM</span></li>
+        </ul>
+        <p class="mb-1"><i class="bi bi-geo-alt me-2" style="color:var(--isla-coral);"></i>Katapatan Mutual Homes, Banay-Banay, Cabuyao, Laguna</p>
+        <p class="mb-4"><i class="bi bi-telephone me-2" style="color:var(--isla-coral);"></i>(049) 555-0182</p>
+        <a href="#reserve" class="btn btn-outline-sand w-100">Reserve a Table</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ACCORDION ============ -->
+<section id="faq" class="section-sand">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="text-center mb-5">
+          <p class="eyebrow justify-content-center d-flex">Good to Know</p>
+          <h2 class="display-5 fw-bold">Frequently asked questions</h2>
+        </div>
+        <div class="accordion" id="faqAccordion">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">Do you take walk-ins?</button>
+            </h2>
+            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">Yes, walk-ins are always welcome, though weekends and Island Nights fill up fast — a reservation guarantees your table.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">Is there parking available?</button>
+            </h2>
+            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">Yes, we have a private lot behind the building with space for about 25 vehicles, plus street parking.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">Can you accommodate large groups?</button>
+            </h2>
+            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">Groups of up to 20 can be seated with advance notice. For anything larger, message us about our private events room.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">Do you have vegetarian options?</button>
+            </h2>
+            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">A handful of our coconut-braised vegetable dishes, like the Laing, can be made without seafood — just let your server know.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RESERVATION FORM ============ -->
+<section id="reserve" class="section-sand pt-0">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="p-4 p-md-5 bg-white shadow-sm rounded-none">
+          <div class="text-center mb-4">
+            <p class="eyebrow justify-content-center d-flex">Reservations</p>
+            <h2 class="display-5 fw-bold">Book your table</h2>
+          </div>
+          <form id="reserveForm" class="row g-3 needs-validation" novalidate>
+            <div class="col-md-6">
+              <label class="form-label" for="fullName">Full name</label>
+              <input type="text" class="form-control" id="fullName" required>
+              <div class="invalid-feedback">Please enter your name.</div>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label" for="phone">Phone number</label>
+              <input type="tel" class="form-control" id="phone" required>
+              <div class="invalid-feedback">Please enter a contact number.</div>
+            </div>
+            <div class="col-md-4">
+              <label class="form-label" for="date">Date</label>
+              <input type="date" class="form-control" id="date" required>
+              <div class="invalid-feedback">Please choose a date.</div>
+            </div>
+            <div class="col-md-4">
+              <label class="form-label" for="time">Time</label>
+              <select class="form-select" id="time" required>
+                <option value="" selected disabled>Choose...</option>
+                <option>11:00 AM</option>
+                <option>1:00 PM</option>
+                <option>6:00 PM</option>
+                <option>8:00 PM</option>
+              </select>
+              <div class="invalid-feedback">Please choose a time.</div>
+            </div>
+            <div class="col-md-4">
+              <label class="form-label" for="guests">Guests</label>
+              <input type="number" class="form-control" id="guests" min="1" max="20" value="2" required>
+              <div class="invalid-feedback">1–20 guests.</div>
+            </div>
+            <div class="col-12">
+              <label class="form-label" for="notes">Special requests</label>
+              <textarea class="form-control" id="notes" rows="3" placeholder="Allergies, occasion, seating preference..."></textarea>
+            </div>
+            <div class="col-12 form-check">
+              <input type="checkbox" class="form-check-input" id="agree" required>
+              <label class="form-check-label small" for="agree">I understand tables are held for 15 minutes past reservation time.</label>
+              <div class="invalid-feedback">Please confirm before booking.</div>
+            </div>
+            <div class="col-12 text-center pt-2">
+              <button type="submit" class="btn btn-coral btn-lg px-5">Confirm Reservation</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MODAL (event details) ============ -->
+<div class="modal fade" id="eventModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content rounded-none">
+      <div class="modal-header" style="background:var(--isla-teal); color:var(--isla-sand);">
+        <h5 class="modal-title display-font">Island Nights</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Every Friday from 6 PM, the dining room turns into a lantern-lit celebration with live kulintang music and a shared set menu for the table.</p>
+        <p class="mb-0 small text-muted">Set menu ₱950/head. Reservation required — space is limited to 60 guests.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-secondary rounded-none" data-bs-dismiss="modal">Close</button>
+        <a href="#reserve" class="btn btn-coral rounded-none" data-bs-dismiss="modal">Reserve Friday</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="text-center pb-5 section-sand">
+  <button class="btn btn-outline-dark rounded-none" data-bs-toggle="modal" data-bs-target="#eventModal">
+    <i class="bi bi-calendar-event me-1"></i> Learn about Island Nights
+  </button>
+</div>
+
+<!-- ============ TOAST (submission confirmation) ============ -->
+<div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index:1080;">
+  <div id="confirmToast" class="toast text-bg-dark" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header" style="background:var(--isla-teal); color:var(--isla-sand);">
+      <i class="bi bi-check-circle-fill me-2"></i>
+      <strong class="me-auto">Reservation received</strong>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast"></button>
+    </div>
+    <div class="toast-body">Thanks! We'll text a confirmation shortly.</div>
+  </div>
+</div>
+
+<!-- ============ FOOTER ============ -->
+<footer class="pt-5 pb-4">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <h4 class="display-font mb-3" style="color:var(--isla-sand);">Kusina <span style="color:var(--isla-coral);">Isla</span></h4>
+        <p class="small">Coastal Filipino grill and kitchen, serving Cabuyao since 2016.</p>
+        <div class="d-flex gap-2 mt-3">
+          <a href="#" class="social-circle"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="social-circle"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="social-circle"><i class="bi bi-tiktok"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-2 col-6">
+        <h6 class="text-uppercase small mb-3" style="color:var(--isla-gold); letter-spacing:.08em;">Explore</h6>
+        <ul class="list-unstyled small">
+          <li class="mb-2"><a href="#about">Our Story</a></li>
+          <li class="mb-2"><a href="#menu">Menu</a></li>
+          <li class="mb-2"><a href="#gallery">Gallery</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-2 col-6">
+        <h6 class="text-uppercase small mb-3" style="color:var(--isla-gold); letter-spacing:.08em;">Support</h6>
+        <ul class="list-unstyled small">
+          <li class="mb-2"><a href="#faq">FAQ</a></li>
+          <li class="mb-2"><a href="#reserve">Reservations</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4">
+        <h6 class="text-uppercase small mb-3" style="color:var(--isla-gold); letter-spacing:.08em;">Newsletter</h6>
+        <div class="input-group">
+          <input type="email" class="form-control rounded-none" placeholder="you@email.com" aria-label="Email">
+          <button class="btn btn-coral rounded-none" type="button">Subscribe</button>
+        </div>
+      </div>
+    </div>
+    <hr class="my-4" style="border-color:rgba(241,232,214,.15);">
+    <div class="d-flex flex-column flex-md-row justify-content-between small">
+      <p class="mb-0">© 2026 Kusina Isla. All rights reserved.</p>
+      <p class="mb-0">Built for CCS114 — Web Technologies, University of Cabuyao</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Bootstrap JS Bundle (CDN) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Enable Bootstrap tooltips
+  document.addEventListener('DOMContentLoaded', function () {
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    tooltipTriggerList.forEach(function (el) { new bootstrap.Tooltip(el); });
+
+    // Bootstrap form validation
+    var form = document.getElementById('reserveForm');
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+      event.stopPropagation();
+      if (!form.checkValidity()) {
+        form.classList.add('was-validated');
+        return;
+      }
+      form.classList.add('was-validated');
+      var toastEl = document.getElementById('confirmToast');
+      new bootstrap.Toast(toastEl).show();
+      form.reset();
+      form.classList.remove('was-validated');
+    });
+  });
+</script>
+</body>
+</html>
